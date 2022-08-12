@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './button';
 import Svg from './svgImage';
+import CollapseCard from './collapseCard';
 
 class ToDoCard extends Component {
     state = {
@@ -18,7 +19,7 @@ class ToDoCard extends Component {
                     <div className="row pt-1">
                         {/* <!-- Title --> */}
                         <div className="col-10">
-                            <Svg svgPath={ this.state.filledCalendarSvg } />
+                            <Svg svgPath={ this.state.filledCalendarSvg } svgDimensions="18" />
                             <span>Title: Going to school</span>
                         </div>
                         {/* <!-- End of title --> */}
@@ -27,7 +28,7 @@ class ToDoCard extends Component {
                     <div className="row pb-1">
                         {/* <!-- Time --> */}
                         <div className="col-8">
-                            <Svg svgPath={ this.state.filledAlarmSvg } />
+                            <Svg svgPath={ this.state.filledAlarmSvg } svgDimensions="18"/>
                             <span>Time: 21:30</span>
                         </div>
                         {/* <!-- End of time --> */}
@@ -39,6 +40,7 @@ class ToDoCard extends Component {
                             buttonVariant="dark"
                             otherClasses="py-0 rounded-pill float-end"
                         />
+                        <CollapseCard />
         
                     </div>
 
