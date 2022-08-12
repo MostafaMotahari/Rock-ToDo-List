@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from './button';
 import Svg from './svgImage';
 import CollapseCard from './collapseCard';
+import './assets/todoCardStyles.css'
 
 class ToDoCard extends Component {
     state = {
@@ -20,7 +21,7 @@ class ToDoCard extends Component {
                         {/* <!-- Title --> */}
                         <div className="col-10">
                             <Svg svgPath={ this.state.filledCalendarSvg } svgDimensions="18" />
-                            <span>Title: Going to school</span>
+                            <span>Title: { this.props.todoTitle }</span>
                         </div>
                         {/* <!-- End of title --> */}
                     </div>
@@ -29,7 +30,7 @@ class ToDoCard extends Component {
                         {/* <!-- Time --> */}
                         <div className="col-8">
                             <Svg svgPath={ this.state.filledAlarmSvg } svgDimensions="18"/>
-                            <span>Time: 21:30</span>
+                            <span>Time: { this.props.todoTime }</span>
                         </div>
                         {/* <!-- End of time --> */}
 
